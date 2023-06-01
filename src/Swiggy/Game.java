@@ -117,6 +117,11 @@ public class Game {
         }
     }
 
+    public Stack<Card> getDiscardPile() {
+        return discardPile;
+    }
+
+
     public boolean isGameOver() {
         for (Player player : players) {
             if (player.getHand().isEmpty()) {

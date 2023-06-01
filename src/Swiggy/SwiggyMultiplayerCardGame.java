@@ -12,10 +12,10 @@ public class SwiggyMultiplayerCardGame {
         Scanner scanner = new Scanner(System.in);
         List<Player> players = new ArrayList<>();
 
-        System.out.println("Enter The Number Of Player :- ");
-        int no_of_player = scanner.nextInt();
+//        System.out.println("Enter The Number Of Player :- ");
+//        int no_of_player = scanner.nextInt();
 
-        for (int i = 1; i <= no_of_player; i++) {
+        for (int i = 1; i <= 4; i++) {
             System.out.print("Enter name for Player " + i + ": ");
             String playerName = scanner.nextLine();
             players.add(new Player(playerName));
