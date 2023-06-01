@@ -65,7 +65,7 @@ public class Game {
         }
     }
 
-    private Player getCurrentPlayer() {
+    Player getCurrentPlayer() {
         return players.get(currentPlayerIndex);
     }
     private void skipNextPlayer() {
@@ -115,6 +115,15 @@ public class Game {
         } else {
             nextPlayer();
         }
+    }
+
+    public boolean isGameOver() {
+        for (Player player : players) {
+            if (player.getHand().isEmpty()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void printGameState() {
