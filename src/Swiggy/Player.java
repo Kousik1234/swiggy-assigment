@@ -1,5 +1,6 @@
 package Swiggy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
@@ -7,9 +8,9 @@ public class Player {
     private  String name;
     private  List<Card> hand;
 
-    public Player(String name, List<Card> hand) {
+    public Player(String name) {
         this.name = name;
-        this.hand = hand;
+        this.hand = new ArrayList<>();;
     }
 
     public String getName() {
@@ -26,5 +27,13 @@ public class Player {
 
     public void setHand(List<Card> hand) {
         this.hand = hand;
+    }
+
+    public void addCardToHand(Card card) {
+        hand.add(card);
+    }
+
+    public Card playCard(int index) {
+        return hand.remove(index);
     }
 }
